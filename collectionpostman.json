@@ -1,0 +1,68 @@
+{
+    "variables": [],
+    "info": {
+        "name": "API Nest.js - User",
+        "_postman_id": "3a2e1c58-72a7-4b1e-8ae6-5fba0591b18f",
+        "description": "Collection for testing User API endpoints in Nest.js"
+    },
+    "item": [
+        {
+            "name": "Create User",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"pseudonym\": \"johndoe\",\n  \"email\": \"johndoe@example.com\",\n  \"password\": \"password1\",\n  \"token\": \"token1\",\n  \"avatar\": \"avatar1.jpg\"\n}"
+                },
+                "url": "{{base_url}}/users",
+                "description": "Create a new user"
+            },
+            "response": []
+        },
+        {
+            "name": "Get All Users",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/users",
+                "description": "Get all users"
+            },
+            "response": []
+        },
+        {
+            "name": "Get User by ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/users/{{user_id}}",
+                "description": "Get a user by ID"
+            },
+            "response": []
+        },
+        {
+            "name": "Update User",
+            "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"pseudonym\": \"johndoe\",\n  \"email\": \"johndoe@example.com\",\n  \"password\": \"password1\",\n  \"token\": \"token1\",\n  \"avatar\": \"avatar1.jpg\"\n}"
+                },
+                "url": "{{base_url}}/users/{{user_id}}",
+                "description": "Update a user by ID"
+            },
+            "response": []
+        },
+        {
+            "name": "Delete User",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": "{{base_url}}/users/{{user_id}}",
+                "description": "Delete a user by ID"
+            },
+            "response": []
+        }
+    ]
+}

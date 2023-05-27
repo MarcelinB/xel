@@ -9,7 +9,8 @@ import { PreferenceLeague } from './entity/preferenceleague.entity';
 import { League } from './entity/league.entity';
 import { User } from './entity/user.entity';
 import { Team } from './entity/team.entity';
-import { UserService } from './services/user.service';
+import { UserModule } from './module/user.module';
+
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -21,9 +22,9 @@ import { UserService } from './services/user.service';
     database: 'esportAppDB',
     entities: [Game, User, Team, League, PreferenceGame, PreferenceTeam, PreferenceLeague],
     synchronize: true,
-})],
+}), UserModule],
   controllers: [AppController],
-  providers: [AppService, UserService],
+  providers: [AppService],
 })
 export class AppModule {}
 
