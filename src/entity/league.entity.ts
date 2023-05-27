@@ -1,5 +1,6 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn, ManyToMany } from 'typeorm';
 import { Game } from './game.entity';
+import { Team } from './team.entity';
 
 @Entity()
 export class League {
@@ -15,4 +16,7 @@ export class League {
   @ManyToOne(() => Game)
   @JoinColumn({ name: 'id_game' })
   game: Game;
+
+  @ManyToMany(() => Team, team => team.leagues)
+  teams: Team[];
 }
