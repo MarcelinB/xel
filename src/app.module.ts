@@ -12,6 +12,7 @@ import { Team } from './entity/team.entity';
 import { UserModule } from './module/user.module';
 import { GameModule } from './module/game.module';
 import { LeagueModule } from './module/league.module';
+import { TeamModule } from './module/team.module';
 
 
 @Module({
@@ -23,7 +24,7 @@ import { LeagueModule } from './module/league.module';
     password: 'db_password',
     database: 'esportAppDB',
     entities: [Game, User, Team, League, PreferenceGame, PreferenceTeam, PreferenceLeague],
-}), UserModule, GameModule, LeagueModule],
+}), UserModule, GameModule, LeagueModule, TeamModule],
   controllers: [AppController],
   providers: [AppService],
 })
